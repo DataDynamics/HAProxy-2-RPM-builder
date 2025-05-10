@@ -1,10 +1,10 @@
 HOME=$(shell pwd)
-MAINVERSION?=3.0
+MAINVERSION?=3.1
 LUA_VERSION=5.4.7
 USE_LUA?=0
-NO_SUDO?=0
+NO_SUDO?=1
 USE_PROMETHEUS?=0
-VERSION=3.0.3
+VERSION=3.1.7
 ifeq ("${VERSION}","./")
 	VERSION="${MAINVERSION}.0"
 endif
@@ -14,9 +14,7 @@ all: build
 
 install_prereq:
 ifeq ($(NO_SUDO),1)
-	yum install -y pcre-devel make gcc openssl-devel rpm-build systemd-devel wget sed zlib-devel
 else
-	sudo yum install -y pcre-devel make gcc openssl-devel rpm-build systemd-devel wget sed zlib-devel
 endif
 
 clean:

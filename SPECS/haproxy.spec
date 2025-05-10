@@ -202,7 +202,7 @@ fi
 
 %files
 %defattr(-,root,root)
-%doc CHANGELOG README examples/*.cfg doc/architecture.txt doc/configuration.txt doc/intro.txt doc/management.txt doc/proxy-protocol.txt
+%doc CHANGELOG examples/*.cfg doc/configuration.txt doc/intro.txt doc/management.txt doc/proxy-protocol.txt
 %if 0%{?el7} || 0%{?amzn2} || 0%{?el8} || 0%{?el9}
     %license LICENSE
 %endif
